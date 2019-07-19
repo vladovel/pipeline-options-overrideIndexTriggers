@@ -2,14 +2,12 @@ pipeline {
   agent any
   stages {
    stage('Build') {  
-    steps {
       when {
         buildingTag()
       }
-      step {
+      steps {
         echo "Building from a tag"
       }
     }
   }
- }
 }
